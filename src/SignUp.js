@@ -12,7 +12,7 @@ export default class SignUp extends Component {
     handleSubmit = async(e) => {
         e.preventDefault();
         console.log(this.state)
-        let token = await request.post('http://localhost:3000/auth/signup', this.state)
+        let token = await request.post('https://stark-citadel-76024.herokuapp.com/auth/signup', this.state)
         localStorage.setItem('TOKEN_KEY', token.body.token)
         // this.props.history.push('/SignIn')
         console.log(token.body.token)
